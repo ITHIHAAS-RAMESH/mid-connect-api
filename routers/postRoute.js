@@ -41,8 +41,10 @@ router.post("/", async (req, res) => {
   } else {
     const newPost = await Post.create({ userId, title, img });
     if (newPost) {
+      console.log("new post has been created");
       res.status(200).send(newPost);
     } else {
+      console.log({ message: "Error" });
       res.status(500).json({ message: "Error" });
     }
   }
