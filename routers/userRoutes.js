@@ -32,7 +32,7 @@ router.post("/login", async (req, res) => {
   if (!isMatch) {
     return res.send({ message: "username or password is incorrect!" });
   }
-  console.log({ user: user });
+  console.log("user logged in ");
   res.send({ user: user });
 });
 
